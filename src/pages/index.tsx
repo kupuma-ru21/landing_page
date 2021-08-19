@@ -14,28 +14,29 @@ import Footer from 'components/Footer';
 import JsonSchema from 'components/JsonSchema';
 import client from 'graphql/client';
 import GET_LANDING_PAGE from 'graphql/queries/getLandingPage';
+import type { LandingPageProps } from 'types/api';
 
-const Index = () => (
-  <>
-    <SectionHero />
-    <SectionAboutProject />
-    <SectionTech />
-    <SectionConcepts />
-    <SectionModules />
-    <SectionAgenda />
-    <PricingBox />
-    <SectionAboutUs />
-    <SectionReviews />
-    <SectionFaq />
-    <Footer />
-    <JsonSchema />
-  </>
-);
+const Index = ({ logo }: LandingPageProps) => {
+  return (
+    <>
+      <SectionHero logo={logo} />
+      <SectionAboutProject />
+      <SectionTech />
+      <SectionConcepts />
+      <SectionModules />
+      <SectionAgenda />
+      <PricingBox />
+      <SectionAboutUs />
+      <SectionReviews />
+      <SectionFaq />
+      <Footer />
+      <JsonSchema />
+    </>
+  );
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE);
-
-  console.log(landingPage);
 
   return { props: { ...landingPage } };
 };
