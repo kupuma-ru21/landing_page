@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "deploy": "yarn build && next export",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\" && prettier --write \"src/**/*.{ts,tsx}\""
   },
   "author": "Guilherme Louro",
   "license": "MIT",

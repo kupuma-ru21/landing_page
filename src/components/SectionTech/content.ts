@@ -1,44 +1,44 @@
 const icons = [
   {
     name: 'TypeScript',
-    image: 'typescript.svg'
+    image: 'typescript.svg',
   },
   {
     name: 'React',
-    image: 'react.svg'
+    image: 'react.svg',
   },
   {
     name: 'NextJS',
-    image: 'nextjs.svg'
+    image: 'nextjs.svg',
   },
   {
     name: 'Strapi',
-    image: 'strapi.svg'
+    image: 'strapi.svg',
   },
   {
     name: 'Apollo',
-    image: 'apollo.svg'
+    image: 'apollo.svg',
   },
   {
     name: 'GraphQL',
-    image: 'graphql.svg'
+    image: 'graphql.svg',
   },
   {
     name: 'Jest',
-    image: 'jest.svg'
+    image: 'jest.svg',
   },
   {
     name: 'Testing Library',
-    image: 'rtl.svg'
+    image: 'rtl.svg',
   },
   {
     name: 'Storybook',
-    image: 'storybook.svg'
+    image: 'storybook.svg',
   },
   {
     name: 'Cypress',
-    image: 'cypress.svg'
-  }
-]
+    image: 'cypress.svg',
+  },
+];
 
-export default icons
+export default icons;

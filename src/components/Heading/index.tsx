@@ -1,21 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import * as S from './styles'
+import * as S from './styles';
 
 export type Props = {
-  reverseColor?: boolean
-  lineBottom?: boolean
-  children: string
-}
+  reverseColor?: boolean;
+  lineBottom?: boolean;
+  children: string;
+};
 
 const Heading: React.FC<Props> = ({
   reverseColor = false,
   lineBottom = false,
-  children
+  children,
 }) => (
   <S.Wrapper reverseColor={reverseColor} lineBottom={lineBottom}>
     {children}
   </S.Wrapper>
-)
+);
 
-export default Heading
+export default Heading;

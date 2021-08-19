@@ -16,7 +16,7 @@ const content = [
   'Autenticação de usuários',
   'Fluxo de pagamentos',
   'Criação de pipelines em CI',
-  'Deploy automatizado'
-]
+  'Deploy automatizado',
+];
 
-export default content
+export default content;
