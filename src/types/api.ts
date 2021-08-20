@@ -21,10 +21,14 @@ export type SectionConceptsProps = {
   concepts: Array<{ title: string }>;
 };
 
+export type Modules = { title: string; subtitle: string; description: string };
+export type SectionModulesProps = { title: string; modules: Modules[] };
+
 export type LandingPageProps = {
   logo: LogoProps;
   header: HeaderProps;
   sectionAboutProject: SectionAboutProjectProps;
   sectionTech: SectionTechProps;
   sectionConcepts: SectionConceptsProps;
+  sectionModules: SectionModulesProps;
 };
