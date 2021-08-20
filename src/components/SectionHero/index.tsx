@@ -6,14 +6,15 @@ import * as S from './styles';
 
 import { gaEvent } from 'utils/ga';
 import Container from 'components/Container';
-import type { LogoProps } from 'types/api';
+import type { HeaderProps, LogoProps } from 'types/api';
+import { getImageUrl } from 'utils/getImageUrl';
 
 const onClick = () =>
   gaEvent({ action: 'click', category: 'cta', label: 'hero button' });
 
-type Props = { logo: LogoProps };
+type Props = { logo: LogoProps; header: HeaderProps };
 
-const SectionHero = ({ logo }: Props) => {
+const SectionHero = ({ logo, header }: Props) => {
   return (
     <S.Wrapper>
       <Container>
@@ -21,24 +22,18 @@ const SectionHero = ({ logo }: Props) => {
 
         <S.Content>
           <S.TextBlock>
-            <S.Title>React Avançado</S.Title>
-            <S.Description>
-              Crie aplicações reais com NextJS, Strapi, GraphQL e mais!
-            </S.Description>
+            <S.Title>{header.title}</S.Title>
+            <S.Description>{header.description}</S.Description>
             <S.ButtonWrapper>
-              <Button
-                href="https://www.udemy.com/course/react-avancado/?couponCode=PROMOAGO21"
-                onClick={onClick}
-                wide
-              >
-                Comprar
+              <Button href={header.button.url} onClick={onClick} wide>
+                {header.button.label}
               </Button>
             </S.ButtonWrapper>
           </S.TextBlock>
 
           <S.Image
-            src="/img/hero-illustration.svg"
-            alt="Ilustração de um desenvolvedor em frente a um computador com várias linhas de código."
+            src={getImageUrl(header.image.url)}
+            alt={header.image.alternativeText}
           />
         </S.Content>
       </Container>
